@@ -63,7 +63,7 @@ class ConnectPost extends StatelessWidget {
 
                 ///Button And Vertical More Icon
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.sta,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     ElevatedButton(onPressed: (){},
