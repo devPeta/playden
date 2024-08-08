@@ -1,0 +1,5 @@
+Colors
+Images
+Strings
+Sizes
+Paddings
