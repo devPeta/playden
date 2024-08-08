@@ -73,15 +73,15 @@ class _mainViewNavigatorState extends State<mainViewNavigator> {
                 ),
               ],
             ),
-              Positioned(
-                bottom: 0,
-                left: MediaQuery.of(context).size.width/5 * _selectedIndex,
-                child: Container(
-                  width: 64,
-                  height: 4,
-                  color: const Color(0xFF41244B),
-                ),
-              ),
+              // Positioned(
+              //   bottom: 0,
+              //   left: MediaQuery.of(context).size.width/5 * _selectedIndex,
+              //   child: Container(
+              //     width: 64,
+              //     height: 4,
+              //     color: const Color(0xFF41244B),
+              //   ),
+              // ),
             ],
           ),
         ),

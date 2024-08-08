@@ -21,7 +21,7 @@ class SearchCardContent extends StatelessWidget {
     return Card(
       elevation: 2,
       child: Container(
-        height: 285,
+        height: 295,
         width: double.infinity,
         decoration: BoxDecoration(
           color: Colors.white,

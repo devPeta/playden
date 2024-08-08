@@ -79,7 +79,7 @@ class _homepageState extends State<homepage> {
                     left: 20,
                     bottom: -60,
                     child: SizedBox(
-                      height: 90,
+                      height: 100,
                       child: Card(
                         elevation:3,
                         child: Container(

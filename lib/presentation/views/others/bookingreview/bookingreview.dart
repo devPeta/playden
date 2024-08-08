@@ -35,7 +35,7 @@ class BookingReview extends StatelessWidget {
               ///Image And FieldName + Location
               SizedBox(height:  screenHeight * 0.01,),
               const ImageFieldNameAndFieldLocation(),
-              SizedBox(height:  screenHeight * 0.1,),
+              SizedBox(height:  screenHeight * 0.01,),
 
               ///Sport Details
               const SportDetailsContainer(),
@@ -43,26 +43,27 @@ class BookingReview extends StatelessWidget {
 
               ///Total Price
               const TotalPriceContainer(),
-              SizedBox(height:  screenHeight * 0.1,),
 
-
-
-              ///ButtonSpaceBetween
-              const Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  ///PlayPointButton
-                  PlayPointButton(),
-
-                  ///MakePaymentButton
-                  MakePaymentButton(),
-                ],
-              ),
 
             ],
           ),),
       ),
+
+      ///BottomButtonSpaceBetween
+      bottomSheet: const Padding(padding: EdgeInsets.all(16),
+        child:
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      ///PlayPointButton
+                      PlayPointButton(),
+
+                      ///MakePaymentButton
+                      MakePaymentButton(),
+                    ],
+              ),
+        ),
     );
   }
 }

@@ -45,7 +45,6 @@ class SearchScreen extends StatelessWidget {
 
                   ///RowContainer ListView
                   SportList(),
-
                   SizedBox(height: scrHeight * 0.01,),
 
                   ///Search Container

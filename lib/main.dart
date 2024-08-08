@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-
 import 'core/theme/TTheme.dart';
 import 'presentation/views/auths/splashScreen.dart';
 
