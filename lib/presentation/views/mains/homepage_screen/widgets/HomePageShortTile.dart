@@ -17,11 +17,11 @@ class HomePageShortTile extends StatelessWidget {
     return Card(
       elevation: 4,
       child: Container(
-        height: 180,
+        height: 150,
         width: 150,
         decoration: BoxDecoration(
             color: Colors.transparent,
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(15),
             image: DecorationImage(
               image: AssetImage(homePageShortModel.imgPaths,),
               fit: BoxFit.cover,
@@ -30,15 +30,16 @@ class HomePageShortTile extends StatelessWidget {
         child: Stack(
           children: [
             Positioned(
-                bottom: 8,
-                left: 8,
+                bottom: 5,
+                // left: 8,
                 child: TextButton(
                   onPressed: (){},
                   child: Text(homePageShortModel.fieldName, style: GoogleFonts.poppins(
                       textStyle: const TextStyle(
                         color: Colors.white,
                         fontSize: 14,
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w500,
+
                       ),
                   ),
                    ),

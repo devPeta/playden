@@ -49,7 +49,7 @@ class _homepageState extends State<homepage> {
               clipBehavior:Clip.none,
                 children: [
                   SizedBox(
-                height: 160,
+                // height: 230,
                 child: PurpleContainer(
                       child:
                           Padding(
@@ -59,14 +59,13 @@ class _homepageState extends State<homepage> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               ///AppBar
+                              ///
+                              const SizedBox(height: 10),
                               const HomePageAppBar(),
                               SizedBox(height: screenHeight * 0.01,),
-
-
                               ///Search TextField
                               const Search(),
                               SizedBox(height: screenHeight * 0.01,),
-
                             ],
                           ),
                         ),
@@ -77,9 +76,9 @@ class _homepageState extends State<homepage> {
                   Positioned(
                     right: 20,
                     left: 20,
-                    bottom: -60,
+                    bottom: -40,
                     child: SizedBox(
-                      height: 100,
+                      height: 120,
                       child: Card(
                         elevation:3,
                         child: Container(
@@ -103,7 +102,7 @@ class _homepageState extends State<homepage> {
                   SizedBox(height: screenHeight * 0.01,),
                 ],
             ),
-            SizedBox(height: screenHeight * 0.1,),
+            SizedBox(height: screenHeight * 0.08),
 
 
             ///White Color Body, Pick A Sport Text, ListView
@@ -118,12 +117,11 @@ class _homepageState extends State<homepage> {
                 children: [
                   ///PickASportText
                   const PickASportText(),
-                  SizedBox(height: screenHeight * 0.01,),
-
+                  SizedBox(height: screenHeight * 0.01),
 
                   ///ShortHomePage Status
                   SizedBox(
-                    height: 190,
+                    height: 150,
                     child: ListView.separated(
                       scrollDirection: Axis.horizontal,
                       shrinkWrap: true,
@@ -132,15 +130,15 @@ class _homepageState extends State<homepage> {
                         homePageShortModel: homePageShortModelMenu[index],
                       ),
                       separatorBuilder: (BuildContext context, int index) {
-                        return const SizedBox(width: 10);
+                        return const SizedBox(width: 6);
                       },
                     ),
                   ),
-                  SizedBox(height: screenHeight * 0.01,),
+                  SizedBox(height: screenHeight * 0.02),
 
                   ///Recommend Text
                   const RecommendedText(),
-                  SizedBox(height: screenHeight * 0.01,),
+                  SizedBox(height: screenHeight * 0.02),
 
                   ///Recommended Container
                   SizedBox(
@@ -155,6 +153,8 @@ class _homepageState extends State<homepage> {
                       },
                     ),
                   ),
+
+                  // SizedBox(height: screenHeight * 10.02),
                 ],
               ),
             ),

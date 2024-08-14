@@ -24,7 +24,7 @@ class onboardingPageView extends StatelessWidget {
       children: [
         Text(title, style: payTextStyles.playOnboardingBlackTitle,),
         SizedBox(height: screenHeight * 0.01,),
-        Image.asset( imgPaths, ),
+        Center(child: Image.asset( imgPaths, height: 400,)),
         SizedBox(height: screenHeight * 0.01,),
         Text(subtitle, style: payTextStyles.playOnboardingSubTitle,),
       ],

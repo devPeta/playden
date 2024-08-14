@@ -11,7 +11,7 @@ class PickASportText extends StatelessWidget {
     return Text('Pick a sport', style: GoogleFonts.poppins(
         textStyle: const TextStyle(
           color: Colors.black,
-          fontWeight: FontWeight.w700,
+          fontWeight: FontWeight.w600,
           fontSize: 18,
         )
     ),

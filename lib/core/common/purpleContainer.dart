@@ -9,11 +9,12 @@ class PurpleContainer extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(0),
       width: double.infinity,
+      height: 230,
       decoration: const BoxDecoration(
         color: Color(0xFF41244B),
         borderRadius: BorderRadius.only(
-          bottomRight: Radius.circular(15),
-          bottomLeft: Radius.circular(15),
+          bottomRight: Radius.circular(18),
+          bottomLeft: Radius.circular(18),
         )
       ),
       child: child,

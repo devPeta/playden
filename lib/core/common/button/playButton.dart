@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:playden/core/constant/playColors.dart';
 
 class PlayButtonController extends GetxController {
   var isPressed = false.obs;
@@ -18,7 +19,7 @@ class PlayButtonController extends GetxController {
   }
 }
 
-class MyButton extends StatelessWidget {
+class PlayButton extends StatelessWidget {
   final String label;
   final Function onTap;
   final double height;
@@ -26,8 +27,10 @@ class MyButton extends StatelessWidget {
   final Color color;
   final double borderRadius;
   final TextStyle textStyle;
+  final Border? border;
+  final double shadowOpacity;
 
-  MyButton({
+  PlayButton({
     required this.label,
     required this.onTap,
     this.height = 45,
@@ -39,6 +42,8 @@ class MyButton extends StatelessWidget {
       fontSize: 16,
       fontWeight: FontWeight.w600,
     ),
+    this.border,
+    this.shadowOpacity = 0.2,
   });
 
   final PlayButtonController controller = Get.put(PlayButtonController());
@@ -56,11 +61,12 @@ class MyButton extends StatelessWidget {
         decoration: BoxDecoration(
           color: controller.isPressed.value ? color.withOpacity(0.7) : color,
           borderRadius: BorderRadius.circular(borderRadius),
+          border: border,
           boxShadow: controller.isPressed.value
               ? []
               : [
             BoxShadow(
-              color: Colors.black.withOpacity(0.2),
+              color: Colors.black.withOpacity(shadowOpacity),
               spreadRadius: 2,
               blurRadius: 4,
               offset: Offset(0, 2),

@@ -25,7 +25,7 @@ class RecommendedTypeSport extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
           ),
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 6),
+            padding: const EdgeInsets.symmetric( horizontal: 6),
             child: Text(recommmendedSportName, style: GoogleFonts.poppins(
                 textStyle: const TextStyle(
                   color: Color(0xFF929292),

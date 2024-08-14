@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:playden/core/common/button/playButton.dart';
+import 'package:playden/core/constant/playColors.dart';
 import 'package:playden/core/constant/playImages.dart';
 import 'package:playden/core/constant/playTextString.dart';
 import 'package:playden/core/constant/playTextStyles.dart';
@@ -58,14 +60,25 @@ class onboardingScreen extends StatelessWidget {
                 height: screenHeight * 0.01,
               ),
 
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: (){
-                    Get.to(const preLogin());
-                  },
-                  child: Text('Login', style: payTextStyles.playElevatedButtonText,),
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  PlayButton(
+                    label: controller.buttonText.value,
+                    onTap: () {
+                      controller.nextPage();
+                    },
+                    height: 45,
+                    width: 171,
+                    color: playColors.primary,
+                    borderRadius: 12.0,
+                    textStyle: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
             ]
           )
@@ -75,3 +88,11 @@ class onboardingScreen extends StatelessWidget {
   }
 }
 
+
+// ElevatedButton(
+//
+// onPressed: (){
+// Get.to(const preLogin());
+// },
+// child: Text('Login', style: payTextStyles.playElevatedButtonText,),
+// )

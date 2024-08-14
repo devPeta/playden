@@ -17,7 +17,7 @@ class BoxPageViewContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 17, bottom: 17),
+      padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 17, bottom: 0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
@@ -39,8 +39,7 @@ class BoxPageViewContent extends StatelessWidget {
                 )
             ),
           ),
-          const SizedBox(height: 8,),
-
+          const SizedBox(height: 27),
           const Center(child: SmoothDotHomePage()),
         ],
       ),

@@ -5,7 +5,7 @@ import 'package:playden/presentation/views/auths/onBoarding/preLogin.dart';
 
 class BoardingController extends GetxController{
   static BoardingController get instance => Get.find();
-
+  Rx<String> buttonText = 'Next'.obs;
   /// Variables
   final pageController = PageController();
 
@@ -26,7 +26,7 @@ class BoardingController extends GetxController{
 
   /// Update Current Index X jump to next Page
   void nextPage(){
-    if(currentPageIndex.value == 3){
+    if(currentPageIndex.value == 2){
       Get.to(const preLogin());
     } else {
       int page = currentPageIndex.value + 1;
