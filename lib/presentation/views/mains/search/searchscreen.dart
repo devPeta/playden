@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:playden/core/common/purpleContainer.dart';
+import 'package:playden/core/constant/playSizes.dart';
 import 'package:playden/core/constant/playSpacing.dart';
 import 'package:playden/presentation/views/mains/homepage_screen/widgets/SearchTextField.dart';
 import 'package:playden/presentation/views/mains/search/widgets/NearYouText.dart';
@@ -20,15 +21,15 @@ class SearchScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            PurpleContainer(
+            const PurpleContainer(
+              height: 100,
                 child: Padding(
-                  padding: playSpacing.paddingWithAppBarHeight,
+                  padding: playSpacing.paddingWithAppBarHeightSm,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      const Search(),
-                      SizedBox(height: scrHeight * 0.01,)
+                      Search(),
                     ],
                   ),
                 )

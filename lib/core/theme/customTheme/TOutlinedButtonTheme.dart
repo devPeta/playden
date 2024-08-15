@@ -8,7 +8,7 @@ class TOutlinedButtonTheme{
       elevation: 2,
       foregroundColor: const Color(0xFFFFFFFF),
       backgroundColor: const Color(0xFFFFFFFF),
-      side: const BorderSide(color: Color(0xFF41244B), width: 2,),
+      side: const BorderSide(color: Color(0xFF41244B), width: 1,),
       padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 30),
       textStyle: GoogleFonts.raleway(
           textStyle: const TextStyle(
@@ -18,7 +18,7 @@ class TOutlinedButtonTheme{
           )
       ),
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(8),
       ),
       shadowColor: const Color(0xFF41244B).withOpacity(0.4),
     ),

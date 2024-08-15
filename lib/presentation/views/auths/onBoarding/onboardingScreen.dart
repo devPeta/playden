@@ -4,9 +4,7 @@ import 'package:playden/core/common/button/playButton.dart';
 import 'package:playden/core/constant/playColors.dart';
 import 'package:playden/core/constant/playImages.dart';
 import 'package:playden/core/constant/playTextString.dart';
-import 'package:playden/core/constant/playTextStyles.dart';
 import 'package:playden/presentation/views/auths/onBoarding/boardingController.dart';
-import 'package:playden/presentation/views/auths/onBoarding/preLogin.dart';
 import 'package:playden/presentation/views/auths/onBoarding/widgets/onboardingPageView.dart';
 import 'package:playden/presentation/views/auths/onBoarding/widgets/onboardingsmoothdot.dart';
 
@@ -19,7 +17,8 @@ class onboardingScreen extends StatelessWidget {
     final controller = Get.put(BoardingController());
     double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-      body: SafeArea(
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: Padding(
           padding:  const EdgeInsets.only(left: 16, right: 16),
           child : Column(
@@ -87,12 +86,3 @@ class onboardingScreen extends StatelessWidget {
     );
   }
 }
-
-
-// ElevatedButton(
-//
-// onPressed: (){
-// Get.to(const preLogin());
-// },
-// child: Text('Login', style: payTextStyles.playElevatedButtonText,),
-// )

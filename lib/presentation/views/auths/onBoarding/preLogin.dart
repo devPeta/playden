@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:playden/core/common/button/playButton.dart';
+import 'package:playden/core/constant/playColors.dart';
 import 'package:playden/core/constant/playSpacing.dart';
 import 'package:playden/core/constant/playTextStyles.dart';
 import '../../../../core/constant/playImages.dart';
@@ -13,7 +15,8 @@ class preLogin extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-      body: SafeArea(
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: Padding(
           padding: playSpacing.paddingWithAppBarHeight,
           child: Column(
@@ -30,22 +33,31 @@ class preLogin extends StatelessWidget {
               SizedBox(height: screenHeight * 0.01,),
 
               ///Elevated Button
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: (){
+              Center(
+                child: PlayButton(
+                  label: 'Login',
+                  onTap: () {
                     Get.to(const loginScreen());
                   },
-                  child: Text('Login', style: payTextStyles.playElevatedButtonText,),
+                  height: 45,
+                  width: 171,
+                  color: playColors.primary,
+                  borderRadius: 12.0,
+                  textStyle: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-
               const SizedBox(height: 2,),
 
               ///Outlined  Button
-              SizedBox(
-                width: double.infinity,
+              Center(
                 child: OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                    minimumSize: Size(170, 45),
+                  ),
                   onPressed: (){
                     Get.to(const mainViewNavigator());
                   },

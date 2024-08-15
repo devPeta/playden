@@ -24,6 +24,7 @@ class _mainViewNavigatorState extends State<mainViewNavigator> {
 
   @override
   Widget build(BuildContext context) {
+    double scrWidth = MediaQuery.sizeOf(context).width;
     return Scaffold(
       body: screens[
       _selectedIndex
@@ -76,7 +77,7 @@ class _mainViewNavigatorState extends State<mainViewNavigator> {
                 bottom: 10,
                 left: MediaQuery.of(context).size.width/5 * _selectedIndex,
                 child: Container(
-                  width: 45,
+                  width: scrWidth * 0.2,
                   height: 2,
                   decoration: BoxDecoration(
                       color: const Color(0xFF41244B),

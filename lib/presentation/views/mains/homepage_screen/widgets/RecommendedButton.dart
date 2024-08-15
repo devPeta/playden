@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:playden/core/common/button/playButton.dart';
 import 'package:playden/presentation/views/others/booking/bookingscreen.dart';
 import 'package:playden/presentation/views/others/schedulebooking/schedulebooking.dart';
 
@@ -16,30 +17,26 @@ class RecommendedButton extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            minimumSize: const Size(120, 28), // Set the width and height
-            backgroundColor: const Color(0xFF41244B),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(6),
-            ),
+        PlayButton(
+          label: 'Book Now',
+          onTap: () {
+            Get.to(const ScheduleBooking());
+          },
+          height: 42,
+          width: 126,
+          color: const Color(0xFF8F55A2),
+          borderRadius: 12.0,
+          textStyle: const TextStyle(
+            color: Colors.white,
+            fontSize: 10,
+            fontWeight: FontWeight.w700,
           ),
-        onPressed: (){
-          Get.to(const ScheduleBooking());
-        },
-        child: Text('Book Now', style: GoogleFonts.poppins(
-          fontSize: 10,
-          color: const Color(0xFFFFFFFF),
-          fontWeight: FontWeight.w700,
         ),
-        ),
-        ),
-
 
 
         OutlinedButton(
           style: OutlinedButton.styleFrom(
-            minimumSize: const Size(120, 28), // Set the width and height
+            minimumSize: const Size(121, 24), // Set the width and height
             backgroundColor: const Color(0xFFffffff),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(6),

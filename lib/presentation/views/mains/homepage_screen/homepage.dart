@@ -49,8 +49,8 @@ class _homepageState extends State<homepage> {
               clipBehavior:Clip.none,
                 children: [
                   SizedBox(
-                // height: 230,
                 child: PurpleContainer(
+                  height: 230,
                       child:
                           Padding(
                           padding: playSpacing.paddingWithAppBarHeightSm,
@@ -59,7 +59,6 @@ class _homepageState extends State<homepage> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               ///AppBar
-                              ///
                               const SizedBox(height: 10),
                               const HomePageAppBar(),
                               SizedBox(height: screenHeight * 0.01,),

@@ -17,6 +17,7 @@ class FavouriteScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             PurpleContainer(
+              height: 187,
               child: Padding(
                 padding: playSpacing.paddingWithAppBarHeightSm,
                 child: Column(

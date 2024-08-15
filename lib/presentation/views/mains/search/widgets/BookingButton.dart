@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:playden/core/common/button/playButton.dart';
 import 'package:playden/presentation/views/others/bookingreview/bookingreview.dart';
 
 
@@ -13,19 +13,21 @@ class BookingButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        backgroundColor: const Color(0xFF8F55A2),
-        minimumSize: const Size(126, 42), // Set the width and height
-      ),
-      onPressed: (){
+    return PlayButton(
+      label: 'Book Now',
+      onTap: () {
         Get.to(const BookingReview());
       },
-      child: Text('Book Now', style: GoogleFonts.poppins(
-        fontWeight: FontWeight.w500,
-        fontSize: 17,
-      ),
+      height: 42,
+      width: 126,
+      color: const Color(0xFF8F55A2),
+      borderRadius: 12.0,
+      textStyle: const TextStyle(
+        color: Colors.white,
+        fontSize: 18,
+        fontWeight: FontWeight.bold,
       ),
     );
   }
 }
+

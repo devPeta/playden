@@ -1,23 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:playden/core/constant/playTextStyles.dart';
-class QtCustomDialog extends StatelessWidget {
-  final String? title;
+class CustomDialog extends StatelessWidget {
   final String subTitle;
-  final Image? imgPaths;
-  final String? onElevatedButtonText;
-  final String? onOutlinedButtonText;
-  final VoidCallback? onElevatedButtonPressed;
-  final VoidCallback? onOutlinedButtonPressed;
+  final Image imgPaths;
+  final String onElevatedButtonText;
+  final VoidCallback onElevatedButtonPressed;
 
-  const QtCustomDialog({
+
+  const CustomDialog({
     Key? key,
-    required this.title,
     required this.subTitle,
     required this.imgPaths,
-    this.onElevatedButtonPressed,
-    this.onOutlinedButtonPressed,
-    this.onElevatedButtonText,
-    this.onOutlinedButtonText,
+    required this.onElevatedButtonPressed,
+    required this.onElevatedButtonText,
+
   }) : super(key: key);
 
   @override
@@ -34,7 +30,7 @@ class QtCustomDialog extends StatelessWidget {
           width: double.infinity,
           decoration: BoxDecoration(
             color: const Color(0xFFFFFFFF),
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(4),
           ),
           padding: const EdgeInsets.all(10.0),
           child: Column(
@@ -43,18 +39,11 @@ class QtCustomDialog extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               if(imgPaths!= null)imgPaths!,
-              Text(title!, style: const TextStyle(
-                color: Color(0xFF000000),
-                fontWeight: FontWeight.w700,
-                fontSize: 17,
-              ),
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 2,),
+              const SizedBox(height: 4,),
               Text(subTitle,  style: const TextStyle(
                 color: Color(0xFF000000),
-                fontWeight: FontWeight.w500,
-                fontSize: 14,
+                fontWeight: FontWeight.w700,
+                fontSize: 10,
               ),
                 softWrap: true,
                 textAlign: TextAlign.center,
@@ -66,32 +55,15 @@ class QtCustomDialog extends StatelessWidget {
                     onPressed:  onElevatedButtonPressed,
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF8F55A2),
+                      minimumSize: const Size(double.infinity, 44),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5)
                       ),
                     ),
-                    child: Text(onElevatedButtonText!, style: payTextStyles.playElevatedButtonText)
+                    child: Text(onElevatedButtonText, style: payTextStyles.playElevatedButtonText)
                 ),
               ),
               const SizedBox(height: 2,),
-              SizedBox(
-                width: double.infinity,
-                child: OutlinedButton(
-                  onPressed: onOutlinedButtonPressed,
-                  style: OutlinedButton.styleFrom(
-                    backgroundColor: const Color(0xFFFFFFFF),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5),
-                        side: const BorderSide(
-                          color: Color(0xFF1477E0),
-                          style: BorderStyle.solid,
-                          width: 2,
-                        )
-                    ),
-                  ),
-                  child: Text(onOutlinedButtonText!, style: payTextStyles.playOutlinedButtonText),
-                ),
-              ),
             ],
           ),
         ),
