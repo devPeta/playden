@@ -50,7 +50,7 @@ class ConnectPost extends StatelessWidget {
                       const  SizedBox(
                           height:28,
                           width: 28,
-                          child: CircleAvatar(backgroundColor: Colors.red, )
+                          child: CircleAvatar(backgroundColor: Colors.red, ),
                       ),
                       const SizedBox(width: 4,),
                       Center(
