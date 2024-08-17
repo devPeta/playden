@@ -3,8 +3,11 @@ import 'package:get/get.dart';
 import 'package:playden/core/common/button/playButton.dart';
 import 'package:playden/core/constant/playColors.dart';
 import 'package:playden/core/constant/playSpacing.dart';
+import 'package:playden/presentation/views/others/chatScreen.dart';
 import '../../../../core/constant/playImages.dart';
 import '../login_screens/loginScreen.dart';
+import '../login_screens/PrivacyPolicy.dart';
+
 class preLogin extends StatelessWidget {
   const preLogin({Key? key}) : super(key: key);
 
@@ -50,24 +53,26 @@ class preLogin extends StatelessWidget {
               const SizedBox(height: 2,),
 
               ///Outlined  Button
-              PlayButton(
-                label: 'Login As Guest',
-                onTap: () {
-                  Get.to(const loginScreen());
-                },
-                height: 45,
-                width: 171,
-                color: const Color(0xffffffff),
-                border: Border.all(
-                  color: const Color(0xFF8F55A2),
-                  style: BorderStyle.solid,
-                  width: 2,
-                ),
-                borderRadius: 12.0,
-                textStyle: const TextStyle(
-                  color: Color(0xFF41244B),
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
+              Center(
+                child: PlayButton(
+                  label: 'Login As Guest',
+                  onTap: () {
+                    Get.to( ChatScreen());
+                  },
+                  height: 45,
+                  width: 171,
+                  color: const Color(0xffffffff),
+                  border: Border.all(
+                    color: const Color(0xFF8F55A2),
+                    style: BorderStyle.solid,
+                    width: 2,
+                  ),
+                  borderRadius: 12.0,
+                  textStyle: const TextStyle(
+                    color: Color(0xFF41244B),
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ],

@@ -21,9 +21,9 @@ class PrivacyPolicy extends StatelessWidget {
           children:[
             ///Container of Milk C0lor
             MilkContainer(
-            height: 100,
+            height: 150,
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(16, 32, 16, 8),
+              padding: const EdgeInsets.fromLTRB(16, 52, 16, 8),
             child: Column(
               crossAxisAlignment:  CrossAxisAlignment.start ,
               mainAxisAlignment: MainAxisAlignment.start,
@@ -181,8 +181,8 @@ class PrivarcyTextContent extends StatelessWidget {
 
       Text(title, style: GoogleFonts.inter(
         color: const Color(0xFF010C15),
-        fontSize: 14,
-        fontWeight: FontWeight.w400,
+        fontSize: 22,
+        fontWeight: FontWeight.w700,
       ), ),
 
       const SizedBox(height: 2,),
